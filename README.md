@@ -56,6 +56,8 @@ Editors have written an article and would like users to be able to read it. It c
 
 **Hints:**
 - Create a set of components that will be able to render the given payload.
+- How could you handle when a new component is added that isn't supported by the website?
+- Is there any metadata returned in the API response that could improve the functionality of the website?
 
 **Reference:**
 - [Original Article](https://www.abc.net.au/news/2021-11-22/women-in-engineering-mentoring/100635010)
@@ -73,48 +75,11 @@ Given this is a demo site, the third-party embed should only link to the source 
 **Hints:**
 - How can you ensure that future third-party embeds are handled neatly with regards to file structure?
 
-**Reference:**
-- [Original Article](https://www.abc.net.au/news/2021-11-15/museum-of-tropical-queenslands-underwater-shipwreck-explorer/100612884)
-
-#### 3. Adding Key-points
-
-Editors have found users are skimming articles and have started adding a Key-points module into their articles so users can just read the important points without having to read the entire article. They'd like you to add support for key-points into the article.
-
-**Files:**
-- `/src/pages/Article3.tsx`
-- `/src/data/article3.json`
-
-**Hints:**
-- Given this is a feature-rich component, editors are likely to want to enhance this over time.
-
-**Reference:**
-- [Original Article](https://www.abc.net.au/news/2021-11-23/matildas-chelsea-sam-kerr-nominated-fifa-best-award/100642254)
-
-#### 4. Sharing + Finishing up
-
-Editors have found that the Key-points component was a success! They now would like users to be able to share the article from the key-points component. You'll need to add a button that users can click to share the article.
-
-The editors have also snuck in a promotional component for additional content, find a graceful way to handle this unsupported component.
-
-Given this is a demo site, the button should be simple and only trigger an `alert("Article has been shared!")`.
-
-You may also use this step to tidy up anything you feel could improve the site's functionality or accessibility, or give it your own personal flare.
-
-**Files:**
-- `/src/pages/Article4.tsx`
-- `/src/data/article4.json`
-
-**Hints:**
-- Are there any accessibility enhancements that could be made?
-- How could you handle when a new component is added that isn't supported by the website?
-- Is there any data returned in the API response that could improve the functionality of the website?
-
 **Questions:**
-- How could you ensure bundle size is kept to a minimum and doesn't include code that's not required for the specific page?
 - Given the requirement to add an additional third-party embed, could this be done in a few simple steps? How would you explain to a developer how to add a YouTube Video embed.
 
 **Reference:**
-- [Original Article](https://www.abc.net.au/news/2021-11-24/marinus-link-cant-cope-with-victorian-energy-market-report-finds/100644966)
+- [Original Article](https://www.abc.net.au/news/2021-11-15/museum-of-tropical-queenslands-underwater-shipwreck-explorer/100612884)
 
 ## Available Scripts
 

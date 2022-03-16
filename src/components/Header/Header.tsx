@@ -12,12 +12,6 @@ const Header = (): JSX.Element => (
         <li>
           <NavLink to="/article-2">Article Two</NavLink>
         </li>
-        <li>
-          <NavLink to="/article-3">Article Three</NavLink>
-        </li>
-        <li>
-          <NavLink to="/article-4">Article Four</NavLink>
-        </li>
       </ul>
     </nav>
   </header>
