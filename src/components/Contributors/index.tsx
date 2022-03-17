@@ -1,38 +1,14 @@
 import React from "react"
+import styles from "../Article/Article.module.css"
 
-export type ContributorTypes = {
-  data: NameType[]
+type ContributorsType = {
+  contributors: string[]
 }
 
-type NameType = {
-  names: {
-    first: string
-    full: string
-    last: string
-  }
-  role: string
-}
-
-const Contributers: React.FC<ContributorTypes> = ({ data }) => {
-  let length = data.length - 1
-  console.log({ length })
+const Contributer: React.FC<ContributorsType> = ({ contributors }) => {
   return (
-    <>
-      <p>
-        By&nbsp;
-        {data.map((contributor, i) => {
-          console.log({ i })
-          return (
-            <span>
-              {contributor.names.full}&nbsp;
-              {/* Add conditional here to only show ampersand once */}
-              {i !== length && "& "}
-            </span>
-          )
-        })}
-      </p>
-    </>
+    <span className={styles.contributors}>By {contributors.join(", ")}</span>
   )
 }
 
-export default Contributers
+export default Contributer

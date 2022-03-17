@@ -1,0 +1,12 @@
+.picture {
+  max-height: 500px;
+  display: flex;
+  overflow: hidden;
+}
+
+.picture img {
+  object-fit:cover;
+  display: flex;
+  width: 100%;
+  height: auto;
+}

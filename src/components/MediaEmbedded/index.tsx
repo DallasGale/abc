@@ -1,73 +1,19 @@
 import React from "react"
 
-type LocationTypes = {
-  data: Props[]
-}
-
-type Props = {
-  alt: string
-  byline: {
-    json: {
-      tagname: string
-      children: JsonChildrenType[]
-    }
-  }
-  canonicalURL: string
+type MediaTypes = {
   caption: string
-  // dates: {
-  //   displayPublished: string
-  //   published: string
-  //   updated: string
-  // }
-  media: {
-    image: {
-      primary: {
-        complete: CompleteMedia[]
-      }
-    }
-  }
-  source: string
-  sourceUrl: string
-  title: string
-  titleAlt: {
-    lg: string
-    md: string
-    sm: string
-  }
-}
-
-type CompleteMedia = {
-  cropHeight: number
-  cropWidth: number
-  height: number
   url: string
-  width: number
-  x: number
-  y: number
+  alt: string | undefined
 }
 
-type JsonChildrenType = {
-  tagname: string
-  children: string[]
-}
-
-const MediaEmbedded: React.FC<LocationTypes> = ({ data }) => {
+const MediaEmbedded: React.FC<MediaTypes> = ({ caption, url, alt }) => {
   return (
-    <>
-      <h2>Media Embedded</h2>
-      {data.map((embed) => {
-        const { titleAlt, title, caption } = embed
-        const { url, width, height } = embed.media.image.primary.complete[0]
-        return (
-          <div>
-            <figcaption>
-              {caption}
-              <img src={url} alt={`${titleAlt}`} />
-            </figcaption>
-          </div>
-        )
-      })}
-    </>
+    <div>
+      <figcaption>
+        {caption}
+        <img src={url} alt={alt} style={{ width: "100%" }} />
+      </figcaption>
+    </div>
   )
 }
 

@@ -1,0 +1,19 @@
+.picture {
+  max-height: 500px;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.picture img {
+  object-fit:cover;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.figcaption {
+  font-size: 12px;
+  padding: 20px;
+}
