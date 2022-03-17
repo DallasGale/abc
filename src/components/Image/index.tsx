@@ -8,7 +8,7 @@ type ImageTypes = {
 }
 const Image: React.FC<ImageTypes> = ({ src, alt, caption, byline }) => {
   return (
-    <figure>
+    <figure className={styles.figure}>
       <picture className={styles.picture}>
         <img src={`${src}`} alt={`${alt}`} />
       </picture>{" "}

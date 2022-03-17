@@ -6,15 +6,11 @@
   margin-right: 0;
 }
 
-.article * {
-  flex: 1;
-}
-
-.article
 
 .header {
   padding: 1.5rem 1rem 1rem;
-  border-bottom: 1px solid #e6e6e6;
+  border: 1px solid #e6e6e6;
+  border-bottom: none;
 }
 
 .header h1 {
@@ -25,7 +21,13 @@
   line-height: 3rem;
 }
 
+.featuredImage {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+
+}
 .contributors,
+.source,
 .date {
   display: block;
   line-height: 1.25rem;
@@ -62,11 +64,14 @@
 }
 
 .content {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  padding: 3rem 1rem 0 1rem;
+  padding: 3rem 7rem 0 7rem;
+  border: 1px solid #e6e6e6;
+  border-top: none;
 }
 
 .content blockquote {
@@ -76,6 +81,15 @@
 .sidebar h2 {
   font-weight: 900;
   margin-bottom: 2rem;
+}
+
+.metadata {
+  display: flex;
+
+}
+
+.metadata p {
+  margin-top: 0;
 }
 
 .moreStories {

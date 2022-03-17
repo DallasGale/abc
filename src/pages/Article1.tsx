@@ -6,31 +6,32 @@ import data from "../data/article1.json"
 import Image from "../components/Image"
 
 // Utils
-import { contributorsFullName } from "../utils/contributorFullName"
+// import { contributorsFullName } from "../utils/contributorFullName"
 
-const contributors = data._embedded.contributors
+const contributors: any[] = data._embedded.contributors
 
+// console.log({ contributors })
 const Article1 = () => {
-  const { dates } = data
-  const names = contributorsFullName(contributors)
+  const { dates, source, sourceURL } = data
+  // const names = contributorsFullName(contributors)
   return (
     <>
-      <Article title={data.title} contributors={names} dates={dates}>
-        {/* Media Featured */}
-        {data._embedded.mediaFeatured.length && (
-          <Image
-            src={
-              data._embedded.mediaFeatured[0].media.image.primary.complete[0]
-                .url
-            }
-            alt={data._embedded.mediaFeatured[0].alt}
-            caption={`${data._embedded.mediaFeatured[0].caption}`}
-            byline={
-              data._embedded.mediaFeatured[0].byLine.json.children[0]
-                .children[0].content
-            }
-          />
-        )}
+      <Article
+        title={data.title}
+        contributors={contributors}
+        dates={dates}
+        source={source}
+        sourceURL={sourceURL}
+        featuredImage={{
+          url: data._embedded.mediaFeatured[0].media.image.primary.complete[0]
+            .url,
+          alt: data._embedded.mediaFeatured[0].alt,
+          caption: `${data._embedded.mediaFeatured[0].caption}`,
+          byline:
+            data._embedded.mediaFeatured[0].byLine.json.children[0].children[0]
+              .content,
+        }}
+      >
         {data.text.json.children.length ? (
           <>
             {data.text.json.children.map((child: any, i) => {
