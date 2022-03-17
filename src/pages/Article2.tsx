@@ -79,10 +79,10 @@ const Article2 = () => {
                             containerTagName="div"
                             protocol=""
                             injectScript
-                            onLoading={() => {}}
-                            onSuccess={() => {}}
-                            onAfterRender={() => {}}
-                            onFailure={() => {}}
+                            onLoading={() => console.log("loading")}
+                            onSuccess={() => console.log("success")}
+                            onAfterRender={() => console.log("after render")}
+                            onFailure={() => console.log("failure")}
                           />
                         )
                       } else return null
