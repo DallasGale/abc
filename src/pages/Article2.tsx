@@ -71,9 +71,7 @@ const Article2 = () => {
                         return (
                           <InstagramEmbed
                             url={`${externalEmbedUrl}`}
-                            clientAccessToken={
-                              "a37ca229a232037d6d700cac4f823b26"
-                            }
+                            clientAccessToken={"698061617997892"}
                             maxWidth={320}
                             hideCaption={false}
                             containerTagName="div"
