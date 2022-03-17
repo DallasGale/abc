@@ -85,7 +85,7 @@ const Article2 = () => {
                             onFailure={() => {}}
                           />
                         )
-                      } else return
+                      } else return null
                     } else if (ref === data._embedded.mediaEmbedded[i].id) {
                       const { alt, caption } = data._embedded.mediaEmbedded[i]
                       const url =
