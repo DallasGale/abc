@@ -6,14 +6,10 @@ import data from "../data/article2.json"
 import Image from "../components/Image"
 import Article from "../components/Article/Article"
 
-// Utils
-import { contributorsFullName } from "../utils/contributorFullName"
-
 const contributors: any[] = data._embedded.contributors
 
 const Article2 = () => {
   const { dates, source, sourceURL } = data
-  const names = contributorsFullName(contributors)
   return (
     <>
       <Article

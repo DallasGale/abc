@@ -5,16 +5,16 @@ export type ContributorsType = {
   contributors: any[]
 }
 
-type Meta = {
-  canonicalURL: string
-  id: string
-  names: {
-    first?: string
-    full: string
-    last?: string
-  }
-  role: string
-}
+// type Meta = {
+//   canonicalURL: string
+//   id: string
+//   names: {
+//     first?: string
+//     full: string
+//     last?: string
+//   }
+//   role: string
+// }
 
 const Contributers: React.FC<ContributorsType> = ({ contributors }) => {
   const length = contributors.length - 1
