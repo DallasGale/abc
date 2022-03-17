@@ -55,9 +55,6 @@ const Article2 = () => {
                 // For image level
                 if (child.parameters) {
                   const { ref } = child.parameters
-                  const altty =
-                    "A woman smiling at the camera, standing in front of shelves of numbered boxes"
-                  // const externalEmbedId = child.emb
 
                   // Check for images / external embeds...
                   for (
@@ -69,8 +66,6 @@ const Article2 = () => {
                       const externalEmbedUrl =
                         data?._embedded?.mediaEmbedded[i]?.externalembed?.url
 
-                      const externalEmbedId =
-                        data?._embedded?.mediaEmbedded[i]?.externalembed?.id
                       if (externalEmbedUrl) {
                         console.log({ externalEmbedUrl })
                         return (
@@ -91,14 +86,7 @@ const Article2 = () => {
                           />
                         )
                       } else return
-                    }
-                    // if (
-                    //   externalEmbedId === data._embedded.mediaEmbedded[i]?.id
-                    // ) {
-                    //   console.log({ externalEmbedId })
-                    //   return <h3>PLACEHOLDR FOR THIRD PARTY EMBED</h3>
-                    // }
-                    else if (ref === data._embedded.mediaEmbedded[i].id) {
+                    } else if (ref === data._embedded.mediaEmbedded[i].id) {
                       const { alt, caption } = data._embedded.mediaEmbedded[i]
                       const url =
                         data?._embedded?.mediaEmbedded[i]?.media?.image.primary
@@ -130,6 +118,7 @@ const Article2 = () => {
                   )
                 }
               }
+              return null
             })}
           </>
         ) : (

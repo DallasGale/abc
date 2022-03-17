@@ -88,6 +88,7 @@ const Article1 = () => {
                   )
                 }
               }
+              return null
             })}
           </>
         ) : (
