@@ -9,21 +9,17 @@
 - metadata
   -- subjects
   -- dates
+  --- posted
+  --- updated
   -- keywords
   -- source
 
 - text_json <!-- how to parse? -->
 
-<!-- "text": {
-        "json":
-        ...
-      }
-  -->
+## 2. Create re-usable component renderer hook
 
-<!--
-"embeddedMedia" & "featuredMedia" id's are linked to
- -->
+## 3. Add some css layout styles
 
-## 2.
+## 4.
 
 ## Additional Notes

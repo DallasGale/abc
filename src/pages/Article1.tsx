@@ -6,6 +6,7 @@ import data from "../data/article1.json"
 import Contributers from "../components/Contributors"
 import Locations from "../components/Locations"
 import MediaEmbedded from "../components/MediaEmbedded"
+import MetaData from "../components/MetaData"
 // Attempt at rendering elements
 // function h1(text: string) {
 //   return <h1>{text}</h1>
@@ -44,6 +45,13 @@ import MediaEmbedded from "../components/MediaEmbedded"
 const Article1 = () => {
   return (
     <Article title={data.title}>
+      <MetaData
+        dates={data.dates}
+        source={data.source}
+        sourceURL={data.sourceURL}
+        contributors={data._embedded.contributors}
+      />
+      <Locations data={data._embedded.locations} />
       {data.text.json.children.length ? (
         <>
           {data.text.json.children.map((child) => {
@@ -59,8 +67,6 @@ const Article1 = () => {
       )}
 
       <MediaEmbedded data={data._embedded.mediaEmbedded} />
-      <Contributers data={data._embedded.contributors} />
-      <Locations data={data._embedded.locations} />
     </Article>
   )
 }

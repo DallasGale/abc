@@ -1,10 +1,10 @@
 import React from "react"
 
-type ContributorNameTypes = {
-  data: Props[]
+export type ContributorTypes = {
+  data: NameType[]
 }
 
-type Props = {
+type NameType = {
   names: {
     first: string
     full: string
@@ -13,18 +13,24 @@ type Props = {
   role: string
 }
 
-const Contributers: React.FC<ContributorNameTypes> = ({ data }) => {
+const Contributers: React.FC<ContributorTypes> = ({ data }) => {
+  let length = data.length - 1
+  console.log({ length })
   return (
     <>
-      <h2>Contributors</h2>
-      {data.map((contributor) => {
-        return (
-          <div>
-            <p>{contributor.names.full}</p>
-            <p>{contributor.role}</p>
-          </div>
-        )
-      })}
+      <p>
+        By&nbsp;
+        {data.map((contributor, i) => {
+          console.log({ i })
+          return (
+            <span>
+              {contributor.names.full}&nbsp;
+              {/* Add conditional here to only show ampersand once */}
+              {i !== length && "& "}
+            </span>
+          )
+        })}
+      </p>
     </>
   )
 }
