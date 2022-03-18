@@ -14,10 +14,7 @@
 
 - text_json <!-- how to parse? -->
 
-## 2. Create re-usable component renderer hook
-
-## 3. Replace some jsx in Article componentn with re-usable components
-
+## 2. Replace some jsx in Article component with re-usable components
 - Contributors
 - Dates
 
