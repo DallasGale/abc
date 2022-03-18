@@ -3,7 +3,6 @@
 ## 1. Based on the schema set-up components for...
 
 - contributors
-- locations
 - media_embedded
 - media_featured
 - metadata
@@ -11,7 +10,6 @@
   -- dates
   --- posted
   --- updated
-  -- keywords
   -- source
 
 - text_json <!-- how to parse? -->
@@ -27,8 +25,24 @@
 
 ## 4. Image not being rendered - fix!
 
-## 3. Add some css layout styles
+## 5. Add some css layout styles
 
-## 4.
+## 6. Refactor article content parser into re-usable component
+
+## 7. Clean up code and write some comments/docs
 
 ## Additional Notes
+
+Pleae see `src/utils/parser` for the main chunk of code that spits out the json content.
+
+New Components:
+
+```
+- src/components/MetaData
+- src/components/Contributors
+- src/components/Dates
+- src/components/Image
+- src/components/Sidebar
+```
+
+How to handle the third party embeds was a little tricky as I mentioned via email. So I have left it by rendering out url the embed url as a stirng.

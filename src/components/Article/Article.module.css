@@ -42,13 +42,6 @@
     flex-grow: 999;
     margin-bottom: 0;
   }
-
-  .sidebar {
-    flex-basis: calc(25% - 1rem);
-    flex-grow: 1;
-    margin-left: 2rem;
-    padding-right: 1rem;
-  }
 }
 
 @media (max-width: 62em) {
@@ -57,10 +50,10 @@
     margin-bottom: 2.5rem;
   }
 
-  .sidebar {
+  /* .sidebar {
     width: 100%;
     padding: 1.5rem;
-  }
+  } */
 }
 
 .content {
@@ -78,10 +71,10 @@
   font-size: 22px;
 }
 
-.sidebar h2 {
+/* .sidebar h2 {
   font-weight: 900;
   margin-bottom: 2rem;
-}
+} */
 
 .metadata {
   display: flex;

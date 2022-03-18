@@ -1,16 +1,17 @@
-import React from "react"
 import styles from "./Article.module.css"
 
-import { ContributorsType } from "../Contributors"
 // Components
 import MetaData from "../MetaData"
-// import Contributors from "../Contributors"
 import Image from "../Image"
+import Sidebar from "../Sidebar"
+
+// Types
+import { ContributorsMetaTypes } from "../Contributors"
 
 interface Props {
   children: React.ReactNode
   title: string
-  contributors?: ContributorsType[]
+  contributors: ContributorsMetaTypes[]
   dates: {
     published: string
     updated: string
@@ -47,21 +48,27 @@ const Article = ({
             dates={dates}
           />
 
-          {/* //? Replaced with isolated component for re-usability... */}
-          {/* {contributors && contributors.length && (
-          <span className={styles.contributors}>
-            By {contributors.join(', ')}
-          </span>
-          <Contributors contributors={contributors} />
-        )} */}
+          {/*  // ----------------------------------------
+              Replaced with isolated component for
+              re-usability... 
 
-          {/* // ? Replaced with isolated component for re-usability... */}
-          {/* {dates && (
-          <span className={styles.date}>
-            {dates.posted && <span>Posted {dates.posted}</span>}
-            {dates.updated && <span> Updated {dates.updated}</span>}
-          </span>
-          <Date dates={dates} />
+              {contributors && contributors.length && (
+                <span className={styles.contributors}>
+                  By {contributors.join(', ')}
+                </span>
+                <Contributors contributors={contributors} />
+              )} */}
+
+          {/*  // ----------------------------------------
+              Replaced with isolated component for
+              re-usability... 
+
+              {dates && (
+              <span className={styles.date}>
+                {dates.posted && <span>Posted {dates.posted}</span>}
+                {dates.updated && <span> Updated {dates.updated}</span>}
+              </span>
+              <Date dates={dates} />
         )} */}
         </div>
         {/* Media Featured */}
@@ -77,10 +84,18 @@ const Article = ({
         )}
         <div className={styles.content}>{children}</div>
       </div>
-      <div className={styles.sidebar}>
-        <h2>More Stories</h2>
-        <div className={styles.moreStories} />
-      </div>
+
+      <Sidebar />
+      {/* 
+          // ----------------------------------------
+          Replaced with isolated component for
+          re-usability... 
+
+          <div className={styles.sidebar}>
+            <h2>More Stories</h2>
+            <div className={styles.moreStories} />
+          </div> 
+      */}
     </article>
   )
 }

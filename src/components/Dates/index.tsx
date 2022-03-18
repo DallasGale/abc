@@ -1,14 +1,14 @@
 import React from "react"
 import styles from "../Article/Article.module.css"
 
-type DatesType = {
+type DateTypes = {
   dates: {
     published: string
     updated: string
   }
 }
 
-const Dates: React.FC<DatesType> = ({ dates }) => {
+const Dates: React.FC<DateTypes> = ({ dates }) => {
   const pubDate = new Date(dates.published)
   const upDate = new Date(dates.updated)
   return (

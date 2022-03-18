@@ -1,22 +1,21 @@
-import React from "react"
 import styles from "../Article/Article.module.css"
 
-export type ContributorsType = {
-  contributors: any[]
+export type ContributorsTypes = {
+  contributors: ContributorsMetaTypes[]
 }
 
-// type Meta = {
-//   canonicalURL: string
-//   id: string
-//   names: {
-//     first?: string
-//     full: string
-//     last?: string
-//   }
-//   role: string
-// }
+export type ContributorsMetaTypes = {
+  canonicalURL: string
+  id: string
+  names: {
+    first?: string
+    full: string
+    last?: string
+  }
+  role: string
+}
 
-const Contributers: React.FC<ContributorsType> = ({ contributors }) => {
+const Contributers: React.FC<ContributorsTypes> = ({ contributors }) => {
   const length = contributors.length - 1
   return (
     <span className={styles.contributors}>

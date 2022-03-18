@@ -2,7 +2,6 @@
 import Contributors from "../Contributors"
 import Dates from "../Dates"
 import styles from "../Article/Article.module.css"
-// import { ContributorsType } from "../Contributors"
 
 type MetaDataTypes = {
   contributors?: any
