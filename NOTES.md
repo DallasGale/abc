@@ -6,11 +6,11 @@
 - media_embedded
 - media_featured
 - metadata
-  -- subjects
-  -- dates
-  --- posted
-  --- updated
-  -- source
+  - subjects
+  - dates
+   - posted
+   - updated
+  - source
 
 - text_json <!-- how to parse? -->
 
