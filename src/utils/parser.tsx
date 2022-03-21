@@ -101,7 +101,8 @@ const Parser: React.FC<Props> = ({ embedded, content }) => {
 
               // ----------------------------------------
               // display image...
-            } else if (ref === mediaEmbedded[i].id) {
+            }
+            if (ref === mediaEmbedded[i].id) {
               const { alt, caption } = mediaEmbedded[i]
               const url = mediaEmbedded[i]?.media?.image.primary.complete[0].url
               const byline =
